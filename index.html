@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Uso de Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
+    <style>
+/* 1. Por defecto (Móviles): Ocupa el 100% del ancho y 300px de alto */
+  #carouselExampleIndicators .carousel-item img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  /* 2. Pantallas medianas y grandes (768px en adelante) */
+  @media (min-width: 768px) {
+    #carouselExampleIndicators {
+      max-width: 1000px;  /* <--- REEMPLAZA 1200px por el ancho máximo real de tus imágenes (ej. 800px, 1000px, etc.) */
+      margin-left: auto;
+      margin-right: auto; /* Centra el carrusel en la pantalla */
+    }
+
+    #carouselExampleIndicators .carousel-item img {
+      height: 500px;        /* Altura fija para pantallas grandes */
+      object-fit: contain;  /* Cambiamos a 'contain' para que la imagen no se recorte y respete su tamaño máximo */
+    }
+  }
+</style>
+
+</head>
+<body>
+<!-- Menu de navegacion-->
+ <header class="container-fluid">
+<nav class="navbar navbar-expand-md bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+    <img src="imagenes/logo_frutas.png" alt="logo" height="24px" class="d-inline-block align-text-bottom" >
+       La Frutería Torreon
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#">Principal</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Frutas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Verduras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tuberculos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Leguminosas</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+<!--Contenedor Principal-->
+    <main class="container-fluid text-center" style="height: 95vh;">
+        <h1 class="display-2">Las mejores frutas de la zona norte</h1>
+        
+        <!--Carrusel de las americas-->
+        <div id="carouselExampleIndicators" class="carousel slide mt-3" >
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner" >
+    <div class="carousel-item active" >
+      <img src="imagenes/carrusel_1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/carrusel_2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/carrusel_3.webp" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/carrusel_4.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+    <!--Ejemplo de banda de marcas-->
+<div class="container-fluid bg-light py-5 text-center">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-1-square-fill" viewBox="0 0 16 16">
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm7.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z"/>
+</svg></div>
+        <div class="col-sm-6 col-md-4 col-lg-2"><i class="bi bi-2-square-fill"></i></div>
+        <div class="col-sm-6 col-md-4 col-lg-2"><i class="bi bi-3-square-fill"></i></div>
+        <div class="col-sm-6 col-md-4 col-lg-2"><i class="bi bi-4-square-fill"></i></div>
+        <div class="col-sm-6 col-md-4 col-lg-2"><i class="bi bi-5-square-fill"></i></div>
+        <div class="col-sm-6 col-md-4 col-lg-2"><i class="bi bi-6-square-fill"></i></div>
+
+    </div>
+
+</div>
+
+    </main>
+
+
+
+    <footer>
+        <p class="fw-bolder">Esto es el pie de página</p>
+    </footer>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
